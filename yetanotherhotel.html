@@ -7,26 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <select id="Select" >
-        <option value="default"></option>
-     </select>
+    <h1></h1>
+    <label>What song comes to mind</label>
+    <input id="artist" type="text">
+    <input type="button" id="confirm" value="Lock In">
+    <div id="ddm"></divid> </div>
     <script>
-        let roomList = [101, 102, 103, 201, 202, 203, 301, 302, 303]
-        let html = "<select>"
-            for (let i = 0; i < roomList.length; i++) {
-            html = html + `<option value="${roomList[i]}">${roomList[i]}</option>`
-                console.log(roomList[i])
+        let songNumbers = [10,20,48,93,1993,3005,90210]
+        let html = "<select id='booked' >"
+            for(let i=0;i < songNumbers.length;i++){
+                html = html + `<option value= "${songNumbers[i]}" >${songNumbers[i]}</option>`
+                console.log(songNumbers[i])
             }
-        html = html + "</select>"
-        document.getElementById("dropdown").innerHTML = html;   
-        let bookedRooms = [];
-        for(let i = 0; i<arr.length; i++){
-        let option = document.createElement("option"),
-        txt = document.createTextNode(arr[i])
-        option.appendChild(txt);
-        option.setAttribute("value",arr[i]);
-        select.insertBefore(option,select.lastChild);
+        html = html + "</selcet>"
+        function removeSong(){
+            let i = document.getElementById("booked");
+            i.remove(i.selctedIndex);
         }
+        document.getElementById("ddm").innerHTML=html;
+        let solvedArtist = []
     </script>
 </body>
 </html>
